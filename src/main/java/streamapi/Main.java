@@ -39,7 +39,7 @@ public class Main {
      * @return Sum of credit points of all students
      */
     public static Integer students(List<Student> studentList) {
-        return studentList.stream().map(Student::cps).reduce(0, Integer::sum);
+        return studentList.stream().mapToInt(Student::cps).sum();
     }
 
     /**
